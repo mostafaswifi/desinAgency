@@ -1,0 +1,233 @@
+/*font importing*/
+@font-face {
+  font-family: decoration;
+  src: url("../assets/fonts/GreyQo-Regular.ttf");
+}
+@font-face {
+  font-family: mainFont;
+  src: url("../assets/fonts/Ubuntu-Regular.ttf");
+}
+/*general*/
+:root {
+  --mainColor: #0dcaf0;
+  --secColor: #e8e8e8;
+}
+* {
+  font-family: mainFont, sans-serif;
+}
+section {
+  opacity: 0;
+  transition-delay: 0.5s;
+  transition: all 2s ease-in-out;
+}
+.square-transition {
+  opacity: 1;
+}
+/*end general*/
+
+/*section 1 sec-header*/
+#sec-header {
+  background-image: url("../assets/images/laponchair.jpg");
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vw;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+}
+
+.nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: smaller;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--mainColor);
+}
+.bg-custom {
+  background-color: var(--mainColor);
+  font-size: large;
+}
+/*end section 1 sec-header*/
+
+/*section 2 sec-header2*/
+.signature {
+  font-family: decoration, serif;
+  font-size: 5rem;
+}
+/*end section 2 sec-header2*/
+
+/*section 3 sec-header3*/
+#sec-header3 {
+  background-image: url("../assets/images/pencilgiftplant.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+.prog{
+  width: 0;
+  transition:all ease-in-out 2s;
+  transition-delay: 3s;
+}
+.progress1{
+  width: 75%;
+}
+.progress2{
+  width: 90%;
+}
+.progress3{
+  width: 65%
+}
+/*end section 3 sec-header3*/
+
+/*section 5 sec-header5*/
+#sec-header5 img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: blanchedalmond;
+  top: 0;
+  right: 0;
+}
+
+#sec-header5 img {
+  width: 100%;
+}
+
+#sec-header5 .father {
+  position: relative;
+  width: 25%;
+  overflow: hidden;
+}
+
+#sec-header5 .father .fixer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  transition: all 0.5s ease-in-out;
+}
+
+#sec-header5 .father:hover .fixer {
+  opacity: 0.6;
+  color: white;
+}
+
+#sec-header5 .father .fixer2 {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(56, 56, 56, 0.794);
+  transform: translatey(-100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.fixer2::after {
+  content: "";
+  transform: translate(-100%, -100%);
+  top: 86%;
+  right: -50%;
+  height: 200%;
+  width: 200%;
+  position: absolute;
+  background-color: rgba(0, 217, 255, 0.582);
+  border-radius: 35%;
+  animation-name: wave;
+  animation-timing-function: linear;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#sec-header5 .father:hover .fixer2 {
+  transform: translatey(0);
+}
+/*end section 5 sec-header5*/
+
+/*start section 6 sec-header6*/
+#sec-header6 {
+  background-color: var(--secColor);
+}
+
+#sec-header6 p {
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+/*end section 6 sec-header6*/
+
+/*start section 10 sec-header10*/
+.carousel-caption.d-none.d-md-block {
+  margin-bottom: 150px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+/*end section 10 sec-header10*/
+
+/*start section 11 sec-header11*/
+#sec-header11 img {
+  width: 150px;
+}
+/*end section 11 sec-header11*/
+/*start section 12 sec-header12*/
+input.form-control{
+  height: 50px;
+}
+
+
+/*end section 12 sec-header12*/
+/*media quories*/
+@media (max-width: 1440px) {
+  .d-flex.flex-column.text-center.my-4 {
+    width: 25%;
+  }
+  .carousel-caption.d-none.d-md-block {
+    margin-bottom: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  #sec-header5 .father {
+    width: 50%;
+  }
+  .d-flex.flex-column.text-center.my-4 {
+    width: 50%;
+  }
+  .carousel-caption.d-none.d-md-block {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  #sec-header5 .father {
+    width: 100%;
+  }
+  .d-flex.flex-column.text-center.my-4 {
+    width: 100%;
+  }
+  .carousel-caption.d-none.d-md-block {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    font-size: xx-small;
+  }
+}
